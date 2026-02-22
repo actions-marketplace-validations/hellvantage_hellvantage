@@ -4,6 +4,14 @@ import sys
 from core.engine import HellVantageEngine
 from core.reporter import SARIFReporter
 
+def print_upsell():
+    print("\n" + "="*65)
+    print("💎 UPGRADE TO HELLVANTAGE ENTERPRISE")
+    print("Unlock 25+ advanced offensive rules (K8s, Cross-Account, Docker)")
+    print("and eliminate false-positives. Get your license today:")
+    print("👉 https://github.com/sponsors/hellvantage")
+    print("="*65 + "\n")
+
 def main():
     parser = argparse.ArgumentParser(description="HellVantage - Elite Cloud SAST Scanner")
     parser.add_argument("-d", "--directory", required=True, help="Target directory containing IaC files to scan")
@@ -20,8 +28,8 @@ def main():
     if not findings:
         if args.format != "sarif":
             print("\n[+] Scan completed. No vulnerabilities detected. Infrastructure is secure.")
+            print_upsell()
         else:
-            # Genera un SARIF vuoto ma valido
             print(SARIFReporter([]).generate())
         sys.exit(0)
 
@@ -39,6 +47,7 @@ def main():
             print(f"  |-- File: {f['file']}")
             print(f"  |-- Details: {f['details']}\n")
     
+    print_upsell()
     sys.exit(1)
 
 if __name__ == "__main__":

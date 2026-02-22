@@ -15,3 +15,14 @@ Uses the following in your GitHub Action:
     output_format: 'sarif'
 
 Built for DevSecOps. Feared by Threat Actors.
+
+## 💎 Enterprise & Pricing
+We operate on a transparent Freemium model. Start protecting your infrastructure for free, upgrade when you need to stop advanced lateral movement.
+
+| Tier | Price | Features |
+| :--- | :--- | :--- |
+| **Hacker** | $0 / mo | Core CI/CD integration, 4 base offensive rules, SARIF export. |
+| **Startup** | $49 / mo | 20+ Advanced rules (K8s, Docker), Zero-False-Positive engine, Email Support. |
+| **Enterprise**| $499 / mo | Custom rule creation, Dedicated Slack Channel, Jira Integration. |
+
+👉 **[Upgrade to Enterprise via GitHub Sponsors](https://github.com/sponsors/hellvantage)**

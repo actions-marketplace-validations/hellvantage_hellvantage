@@ -1,0 +1,26 @@
+name: 'HellVantage Cloud SAST'
+description: 'Offensive Infrastructure as Code security scanner to detect Cloud misconfigurations.'
+author: 'HellVantage'
+
+branding:
+  icon: 'shield'
+  color: 'red'
+
+inputs:
+  target_directory:
+    description: 'The directory containing Terraform/CloudFormation files to scan.'
+    required: true
+    default: '.'
+  output_format:
+    description: 'Output format: text, json, or sarif.'
+    required: false
+    default: 'sarif'
+
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - '-d'
+    - ${{ inputs.target_directory }}
+    - '-f'
+    - ${{ inputs.output_format }}
